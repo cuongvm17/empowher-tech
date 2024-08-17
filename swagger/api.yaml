@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: 'API documentation'
+  description: 'This is document for APIs'
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: 'cuongvm17@gmail.com'
+  version: "1.0"
+servers:
+  - url: 'http://localhost'
+    description: 'local host'
+
+paths:
+  /api/v1/orders:
+    post:
+      summary: 'Create new order'
+      description: 'Create new order'
+      parameters:
+        - name: distance
+          in: body
+          description: 'The distance'
+          required: true
+          style: string
+          schema:
+            properties:
+              distance:
+                type: string
+        - name: deadline
+          in: body
+          description: 'The deadline time'
+          required: true
+          style: string
+          schema:
+            properties:
+              deadline:
+                type: string
+      responses:
+        '200':
+          description: 'Successful'
+        '400':
+          description: 'Bad request'
+        '500':
+          description: 'Internal server error'

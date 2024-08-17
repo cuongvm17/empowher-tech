@@ -1,0 +1,18 @@
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Documentation
+*.md
+
+# Dependency directories
+vendor
+
+# Git file
+.git
+
+# Docker file
+*Dockerfile*
+*docker-compose*
